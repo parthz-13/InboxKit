@@ -2,12 +2,11 @@
 
 A real-time multiplayer tile-claiming game. Players compete on a 40×40 grid, claiming tiles to hold the most territory before the match timer runs out.
 
-![Game Preview](frontend/src/assets/hero.png)
 
 ## How it works
 
 - Every player gets a unique color and joins the same live session
-- Click any tile to claim it — tiles you already own can't be claimed again
+- Click any tile to claim it, tiles you already own can't be claimed again
 - A 3-second cooldown applies between claims, so placement matters
 - The live leaderboard updates instantly as tiles change hands
 - Matches run for 10 minutes, then the board resets and a new match starts
@@ -60,7 +59,7 @@ A real-time multiplayer tile-claiming game. Players compete on a 40×40 grid, cl
 
 - Python 3.11+
 - Node.js 18+
-- A PostgreSQL database (local or hosted — [Neon](https://neon.tech) works out of the box)
+- A PostgreSQL database (local or hosted [Neon](https://neon.tech) works out of the box)
 
 ### Backend
 
@@ -133,4 +132,4 @@ All communication happens over a single WebSocket connection per player at `/ws/
 | Message | Description |
 |---|---|
 | `claim` | Claim a tile by `tile_id` |
-| `ping` | Keepalive — server responds with `pong` |
+| `ping` | Keepalive. server responds with `pong` |

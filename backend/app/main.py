@@ -153,6 +153,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.head("/health")
+async def health_check():
+    return {"status": "ok"}
 
 @app.websocket("/ws/{session_id}")
 async def websocket_endpoint(
